@@ -1,2 +1,14 @@
 # myRiemann
-iOS App to approximate the area under a curve.  Implemented with Swift4, UIKIT, and CocoaPods
+Hieu Nguyen
+Xcode - Swift4, UIKIT
+Pods - DDMathParser, Charts
+
+Description: myRiemann is an iOS application that will calculate and approximate the area
+under a curve f(x) using one of the three following methods.
+        - Left Riemann Sum 
+        - Midpoint Riemann Sum
+        - Right Riemann Sum
+
+Future releases:
+	- Complete graph functionality 
+        - UI redesign
