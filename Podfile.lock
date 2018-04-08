@@ -1,0 +1,22 @@
+PODS:
+  - DDMathParser (2.0.0)
+
+DEPENDENCIES:
+  - DDMathParser (from `https://github.com/davedelong/DDMathParser.git`, tag `swift4`)
+
+EXTERNAL SOURCES:
+  DDMathParser:
+    :git: https://github.com/davedelong/DDMathParser.git
+    :tag: swift4
+
+CHECKOUT OPTIONS:
+  DDMathParser:
+    :git: https://github.com/davedelong/DDMathParser.git
+    :tag: swift4
+
+SPEC CHECKSUMS:
+  DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
+
+PODFILE CHECKSUM: d93ae02249d6bd4f976583f181eb5dbc9e63470a
+
+COCOAPODS: 1.4.0

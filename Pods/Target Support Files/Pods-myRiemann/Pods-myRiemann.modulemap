@@ -1,0 +1,6 @@
+framework module Pods_myRiemann {
+  umbrella header "Pods-myRiemann-umbrella.h"
+
+  export *
+  module * { export * }
+}

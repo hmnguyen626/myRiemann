@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012D8C5A97FACF82D4FAFE377D616D6E /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F168FB513BE73CF1CA0AC29651CC /* Operator.swift */; };
+		02BB0A406F920A177DAF413B8B7694F7 /* TokenResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41516D5A5CA38227490E5DCFF5EB2044 /* TokenResolver.swift */; };
+		03EA62D198E8474E796F33C2EA700147 /* IdentifierExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1301FCF42B0C570F4B57F518C974FFEB /* IdentifierExtractor.swift */; };
+		0F9B784BBCE903B5CF156450F9C345CA /* DecimalNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332692DB1E1F9C530113FEB407FA9574 /* DecimalNumberExtractor.swift */; };
+		1151BE54F9D22DE480BE30D99EFBBC84 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03542510228DADFE3D82B457439512A /* Expression.swift */; };
+		13968FCE4C4CE31129429F078F321434 /* MathParserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C350AFF30522D2A7C2B238AB5F37D264 /* MathParserErrors.swift */; };
+		228E5A568C323812A2A6A4F9D2185DF0 /* DynamicResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6017DCA13FCC1B8DB5826EB30C44CF7 /* DynamicResolution.swift */; };
+		26A19424370C59D63F2941F2BF864088 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		26CB1FB6E8C96622EAEF105830E298D8 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B7EADA7A580717E38A65F76CFC55A /* Tokenizer.swift */; };
+		2DDEA3F01353C385240969E73470C374 /* OctalNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0485928958B02C6ED40B755E35E6E /* OctalNumberExtractor.swift */; };
+		3041C743DF3918E59A153E47486F585C /* TokenCharacterBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7D40E364CD3B941166844F9E99682 /* TokenCharacterBuffer.swift */; };
+		348026454DCFED4115E654B2E6D0ECDD /* SubstitutionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3FDC222E44B29A9401803937BC69 /* SubstitutionExtensions.swift */; };
+		37D2F9997D49312E1E7E4E2FFB066297 /* ExpressionRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888BF302D39EC97CFA8973289936EF68 /* ExpressionRewriter.swift */; };
+		49EE2E610ED7756ABF3023CA655C3B83 /* FunctionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561024EFD1DE0E26F07EC41813BC02BF /* FunctionSet.swift */; };
+		57A4D8A2108562839210A0BA304DCCEF /* Operator+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D79B11CE4F8E9A7BAA33F66E59FBC7 /* Operator+Defaults.swift */; };
+		5BC0FA6AA87B836BAD7EFFCFCC9A3778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5C64EF269D4A65E548A7E2079385D0E3 /* DDMathParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AD13881C725F9702870580D2BC3060 /* DDMathParser-dummy.m */; };
+		67DA2AB8E6F761A4AE575733CB1E3663 /* HexNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429A4DFCA4427BC235135AE33D09A1F /* HexNumberExtractor.swift */; };
+		69ACE2C26F8B2A5AB2888283F8986E63 /* QuotedVariableExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F726B8E96B656FB91C7E546A557F12 /* QuotedVariableExtractor.swift */; };
+		7093D99503523D752EA9902BD7F20816 /* ExponentExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D7468F4BB38C36691716AC99EE337 /* ExponentExtractor.swift */; };
+		7289AF8004695BEFDCB21B4ED5E1B98F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11724AF7760BB064820E677BCDBFF4 /* String.swift */; };
+		74F24A506C947B807379EBC2A32A179B /* LocalizedNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BBC5FC77BE2AAE3051D4D4576060A1 /* LocalizedNumberExtractor.swift */; };
+		756C4497F3C63FC7C1E494495581F941 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0AF69D93B5BB81F58E83CFF9710936 /* Either.swift */; };
+		88F41F9A2BF22FF0D8B96BF6CFD90067 /* OperatorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425809624630B8BFC806579495D2D11F /* OperatorExtractor.swift */; };
+		894CFF8635ED72EA92E3B4703F16640D /* VariableExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68369C13C4BCF766306FAC6EB296B97D /* VariableExtractor.swift */; };
+		8D185DC698F56D86B7328F39756DC2A9 /* OperatorTokenSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A678CF5004189E8A57A1F652E5A1966 /* OperatorTokenSet.swift */; };
+		9865486C92CC5C3815D245BF0D3CD31D /* PeekingIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF97A414FAD08136481B773D5598748 /* PeekingIterator.swift */; };
+		9967CE6C3B9E485747AFD3843E29481C /* ResolvedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4CA0BF5E1EE35048D334246949361 /* ResolvedToken.swift */; };
+		9C0987258BAD2DE0272AD586CC8C5A0D /* RawToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEF5200E375360599002E66A58051FF /* RawToken.swift */; };
+		A6B6AADEF3DB6307D268BE09DA7021FB /* Pods-myRiemann-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 807F2FE20863C2B986663FAFB9745959 /* Pods-myRiemann-dummy.m */; };
+		A834DC864B4312267B09DE81096BADFF /* TokenGrouper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9635F7EAF782E49E3F12AB53E36B22 /* TokenGrouper.swift */; };
+		AC080B9E48F4FA494CABCF13CE37E852 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22804C4E8EE989A2B7FB03036CE42ACD /* Function.swift */; };
+		B6F7BAD5A9CD9AA2A87FD31FFA3D8ACB /* GroupedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30160D99F39CBC0FE215095B05A0A849 /* GroupedToken.swift */; };
+		C34C8F6791CA97975B2FFA1F7D9939AE /* Expressionizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA299D1DD14862B771B92CDB42F1199 /* Expressionizer.swift */; };
+		D0A4A44BF06B5240D2BCEEAE1222B310 /* MathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B7ED0361CB47EB0E24377FB08FF400B0 /* MathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6B4A3A9258B170A99E6AD870E199B35 /* FractionNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502DE1CD933316F3DAC005CCFEA806A /* FractionNumberExtractor.swift */; };
+		D8C8F0D2D50311DB97CD880CA464167A /* RewriteRule+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001FB883117055B63FD9E4840CCC45F /* RewriteRule+Defaults.swift */; };
+		DC265E37626AE66AE2E82F9BA5802B1F /* TokenExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1074D9435F6DE5F8BEDFEA6BB9643328 /* TokenExtractor.swift */; };
+		E748E0730687BC4727B6D77AA3C29CDD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A903B5A79619B31A2FD9054C5676A3 /* Double.swift */; };
+		E8770D222605F37E53FC3AD63EE13830 /* Pods-myRiemann-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F7D33408E54F5BAFA4DB6B0DE50603A /* Pods-myRiemann-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA21D175046AC903DFB33645BE8206FA /* OperatorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17294F09F5690E2066AC486A3C099BEA /* OperatorSet.swift */; };
+		EB33AE18FC4B0A7FC2B610F20613400F /* Functions+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99604402FF9469A61B6DCF32B77F844 /* Functions+Defaults.swift */; };
+		ECEFA0C5D78CD38D4AA04B3E1B135AA4 /* RewriteRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA509B0D60E2663DA4183E9B374E08 /* RewriteRule.swift */; };
+		ED9929024BCE469E3D415C17DB263A59 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B90D9283A28A38B7FDF824A0A5F44 /* Evaluator.swift */; };
+		F10AB9E1BD4DDD9EB73F150E915542DD /* DDMathParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA65383C0CB2164200CA8C0A3B0A4F0 /* DDMathParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA2BDD21C4542A38985B582305C84419 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C97FB85593DF39C5EE0777DB44AA4 /* Character.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1684C46E0BB49A620CC3B95C24A607BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B027C7F17A48E878172D5B42600DA24F;
+			remoteInfo = DDMathParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0017B25CE9733CB0AB455BCFB6958B36 /* Pods-myRiemann.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myRiemann.release.xcconfig"; sourceTree = "<group>"; };
+		027B7EADA7A580717E38A65F76CFC55A /* Tokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tokenizer.swift; path = MathParser/Tokenizer.swift; sourceTree = "<group>"; };
+		08E7D40E364CD3B941166844F9E99682 /* TokenCharacterBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenCharacterBuffer.swift; path = MathParser/TokenCharacterBuffer.swift; sourceTree = "<group>"; };
+		0B11724AF7760BB064820E677BCDBFF4 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = MathParser/String.swift; sourceTree = "<group>"; };
+		0F7D33408E54F5BAFA4DB6B0DE50603A /* Pods-myRiemann-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-myRiemann-umbrella.h"; sourceTree = "<group>"; };
+		1074D9435F6DE5F8BEDFEA6BB9643328 /* TokenExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenExtractor.swift; path = MathParser/TokenExtractor.swift; sourceTree = "<group>"; };
+		1301FCF42B0C570F4B57F518C974FFEB /* IdentifierExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentifierExtractor.swift; path = MathParser/IdentifierExtractor.swift; sourceTree = "<group>"; };
+		17294F09F5690E2066AC486A3C099BEA /* OperatorSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperatorSet.swift; path = MathParser/OperatorSet.swift; sourceTree = "<group>"; };
+		1EDA509B0D60E2663DA4183E9B374E08 /* RewriteRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RewriteRule.swift; path = MathParser/RewriteRule.swift; sourceTree = "<group>"; };
+		207B90D9283A28A38B7FDF824A0A5F44 /* Evaluator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Evaluator.swift; path = MathParser/Evaluator.swift; sourceTree = "<group>"; };
+		22804C4E8EE989A2B7FB03036CE42ACD /* Function.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Function.swift; path = MathParser/Function.swift; sourceTree = "<group>"; };
+		24BBC5FC77BE2AAE3051D4D4576060A1 /* LocalizedNumberExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizedNumberExtractor.swift; path = MathParser/LocalizedNumberExtractor.swift; sourceTree = "<group>"; };
+		30160D99F39CBC0FE215095B05A0A849 /* GroupedToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupedToken.swift; path = MathParser/GroupedToken.swift; sourceTree = "<group>"; };
+		332692DB1E1F9C530113FEB407FA9574 /* DecimalNumberExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalNumberExtractor.swift; path = MathParser/DecimalNumberExtractor.swift; sourceTree = "<group>"; };
+		3429A4DFCA4427BC235135AE33D09A1F /* HexNumberExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexNumberExtractor.swift; path = MathParser/HexNumberExtractor.swift; sourceTree = "<group>"; };
+		41516D5A5CA38227490E5DCFF5EB2044 /* TokenResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenResolver.swift; path = MathParser/TokenResolver.swift; sourceTree = "<group>"; };
+		425809624630B8BFC806579495D2D11F /* OperatorExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperatorExtractor.swift; path = MathParser/OperatorExtractor.swift; sourceTree = "<group>"; };
+		461E061B846E2C8E2B038F1A540DB695 /* Pods-myRiemann-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myRiemann-frameworks.sh"; sourceTree = "<group>"; };
+		493C97FB85593DF39C5EE0777DB44AA4 /* Character.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Character.swift; path = MathParser/Character.swift; sourceTree = "<group>"; };
+		561024EFD1DE0E26F07EC41813BC02BF /* FunctionSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionSet.swift; path = MathParser/FunctionSet.swift; sourceTree = "<group>"; };
+		57F726B8E96B656FB91C7E546A557F12 /* QuotedVariableExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuotedVariableExtractor.swift; path = MathParser/QuotedVariableExtractor.swift; sourceTree = "<group>"; };
+		598AA7F091D488EE16B888D4B0D3C3D4 /* Pods-myRiemann.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myRiemann.debug.xcconfig"; sourceTree = "<group>"; };
+		5FE0485928958B02C6ED40B755E35E6E /* OctalNumberExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OctalNumberExtractor.swift; path = MathParser/OctalNumberExtractor.swift; sourceTree = "<group>"; };
+		630E3FDC222E44B29A9401803937BC69 /* SubstitutionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubstitutionExtensions.swift; path = MathParser/SubstitutionExtensions.swift; sourceTree = "<group>"; };
+		65AD13881C725F9702870580D2BC3060 /* DDMathParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DDMathParser-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68369C13C4BCF766306FAC6EB296B97D /* VariableExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VariableExtractor.swift; path = MathParser/VariableExtractor.swift; sourceTree = "<group>"; };
+		6B17B9AA4CCBF80C598C17165B80CA54 /* Pods-myRiemann-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myRiemann-resources.sh"; sourceTree = "<group>"; };
+		73D79B11CE4F8E9A7BAA33F66E59FBC7 /* Operator+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Operator+Defaults.swift"; path = "MathParser/Operator+Defaults.swift"; sourceTree = "<group>"; };
+		7BEF5200E375360599002E66A58051FF /* RawToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawToken.swift; path = MathParser/RawToken.swift; sourceTree = "<group>"; };
+		807F2FE20863C2B986663FAFB9745959 /* Pods-myRiemann-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-myRiemann-dummy.m"; sourceTree = "<group>"; };
+		841D7468F4BB38C36691716AC99EE337 /* ExponentExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExponentExtractor.swift; path = MathParser/ExponentExtractor.swift; sourceTree = "<group>"; };
+		888BF302D39EC97CFA8973289936EF68 /* ExpressionRewriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpressionRewriter.swift; path = MathParser/ExpressionRewriter.swift; sourceTree = "<group>"; };
+		88EB58622F5873F4A8805E794E80A318 /* DDMathParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DDMathParser.xcconfig; sourceTree = "<group>"; };
+		8FB36B107CC6C036318C3A0E2B33095B /* Pods-myRiemann-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-myRiemann-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A0AF69D93B5BB81F58E83CFF9710936 /* Either.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Either.swift; path = MathParser/Either.swift; sourceTree = "<group>"; };
+		9A678CF5004189E8A57A1F652E5A1966 /* OperatorTokenSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperatorTokenSet.swift; path = MathParser/OperatorTokenSet.swift; sourceTree = "<group>"; };
+		9EADBA247EA414CF1D9E180FA7989FA9 /* Pods-myRiemann-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myRiemann-acknowledgements.plist"; sourceTree = "<group>"; };
+		9FA299D1DD14862B771B92CDB42F1199 /* Expressionizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expressionizer.swift; path = MathParser/Expressionizer.swift; sourceTree = "<group>"; };
+		A03542510228DADFE3D82B457439512A /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = MathParser/Expression.swift; sourceTree = "<group>"; };
+		A492FF41FB47D2A7CC40376D6F866CF7 /* Pods_myRiemann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_myRiemann.framework; path = "Pods-myRiemann.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7CCB8E34FD191FE07D606795FEE0FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B001FB883117055B63FD9E4840CCC45F /* RewriteRule+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RewriteRule+Defaults.swift"; path = "MathParser/RewriteRule+Defaults.swift"; sourceTree = "<group>"; };
+		B56A9CCD10D938B850927B95BAFA4A3E /* DDMathParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DDMathParser.modulemap; sourceTree = "<group>"; };
+		B7B7A763B9D24C5A5083D2F7D0C6F5E2 /* DDMathParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDMathParser-prefix.pch"; sourceTree = "<group>"; };
+		B7ED0361CB47EB0E24377FB08FF400B0 /* MathParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MathParser.h; path = MathParser/MathParser.h; sourceTree = "<group>"; };
+		C350AFF30522D2A7C2B238AB5F37D264 /* MathParserErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathParserErrors.swift; path = MathParser/MathParserErrors.swift; sourceTree = "<group>"; };
+		CBE976CB54DED6A1903BA4E4E26D03A7 /* Pods-myRiemann.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-myRiemann.modulemap"; sourceTree = "<group>"; };
+		CD9635F7EAF782E49E3F12AB53E36B22 /* TokenGrouper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenGrouper.swift; path = MathParser/TokenGrouper.swift; sourceTree = "<group>"; };
+		CEEB6BEE27BC7540495AAFE6AD294F26 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C4CA0BF5E1EE35048D334246949361 /* ResolvedToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResolvedToken.swift; path = MathParser/ResolvedToken.swift; sourceTree = "<group>"; };
+		D6017DCA13FCC1B8DB5826EB30C44CF7 /* DynamicResolution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicResolution.swift; path = MathParser/DynamicResolution.swift; sourceTree = "<group>"; };
+		DCF97A414FAD08136481B773D5598748 /* PeekingIterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekingIterator.swift; path = MathParser/PeekingIterator.swift; sourceTree = "<group>"; };
+		DE6D9956138AA9EF03E3659A76D8D6FA /* MathParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MathParser.framework; path = DDMathParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E481F168FB513BE73CF1CA0AC29651CC /* Operator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = MathParser/Operator.swift; sourceTree = "<group>"; };
+		E99604402FF9469A61B6DCF32B77F844 /* Functions+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Functions+Defaults.swift"; path = "MathParser/Functions+Defaults.swift"; sourceTree = "<group>"; };
+		E9A903B5A79619B31A2FD9054C5676A3 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Double.swift; path = MathParser/Double.swift; sourceTree = "<group>"; };
+		F502DE1CD933316F3DAC005CCFEA806A /* FractionNumberExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FractionNumberExtractor.swift; path = MathParser/FractionNumberExtractor.swift; sourceTree = "<group>"; };
+		FAA65383C0CB2164200CA8C0A3B0A4F0 /* DDMathParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDMathParser-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C31E29012821D904AF30CD1CA4C37F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A19424370C59D63F2941F2BF864088 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC757DE76EB033662F943D64E8B1E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC0FA6AA87B836BAD7EFFCFCC9A3778 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0457AEE7115D6D228D62876354BEDB2A /* DDMathParser */ = {
+			isa = PBXGroup;
+			children = (
+				493C97FB85593DF39C5EE0777DB44AA4 /* Character.swift */,
+				332692DB1E1F9C530113FEB407FA9574 /* DecimalNumberExtractor.swift */,
+				E9A903B5A79619B31A2FD9054C5676A3 /* Double.swift */,
+				D6017DCA13FCC1B8DB5826EB30C44CF7 /* DynamicResolution.swift */,
+				9A0AF69D93B5BB81F58E83CFF9710936 /* Either.swift */,
+				207B90D9283A28A38B7FDF824A0A5F44 /* Evaluator.swift */,
+				841D7468F4BB38C36691716AC99EE337 /* ExponentExtractor.swift */,
+				A03542510228DADFE3D82B457439512A /* Expression.swift */,
+				9FA299D1DD14862B771B92CDB42F1199 /* Expressionizer.swift */,
+				888BF302D39EC97CFA8973289936EF68 /* ExpressionRewriter.swift */,
+				F502DE1CD933316F3DAC005CCFEA806A /* FractionNumberExtractor.swift */,
+				22804C4E8EE989A2B7FB03036CE42ACD /* Function.swift */,
+				E99604402FF9469A61B6DCF32B77F844 /* Functions+Defaults.swift */,
+				561024EFD1DE0E26F07EC41813BC02BF /* FunctionSet.swift */,
+				30160D99F39CBC0FE215095B05A0A849 /* GroupedToken.swift */,
+				3429A4DFCA4427BC235135AE33D09A1F /* HexNumberExtractor.swift */,
+				1301FCF42B0C570F4B57F518C974FFEB /* IdentifierExtractor.swift */,
+				24BBC5FC77BE2AAE3051D4D4576060A1 /* LocalizedNumberExtractor.swift */,
+				B7ED0361CB47EB0E24377FB08FF400B0 /* MathParser.h */,
+				C350AFF30522D2A7C2B238AB5F37D264 /* MathParserErrors.swift */,
+				5FE0485928958B02C6ED40B755E35E6E /* OctalNumberExtractor.swift */,
+				E481F168FB513BE73CF1CA0AC29651CC /* Operator.swift */,
+				73D79B11CE4F8E9A7BAA33F66E59FBC7 /* Operator+Defaults.swift */,
+				425809624630B8BFC806579495D2D11F /* OperatorExtractor.swift */,
+				17294F09F5690E2066AC486A3C099BEA /* OperatorSet.swift */,
+				9A678CF5004189E8A57A1F652E5A1966 /* OperatorTokenSet.swift */,
+				DCF97A414FAD08136481B773D5598748 /* PeekingIterator.swift */,
+				57F726B8E96B656FB91C7E546A557F12 /* QuotedVariableExtractor.swift */,
+				7BEF5200E375360599002E66A58051FF /* RawToken.swift */,
+				D2C4CA0BF5E1EE35048D334246949361 /* ResolvedToken.swift */,
+				1EDA509B0D60E2663DA4183E9B374E08 /* RewriteRule.swift */,
+				B001FB883117055B63FD9E4840CCC45F /* RewriteRule+Defaults.swift */,
+				0B11724AF7760BB064820E677BCDBFF4 /* String.swift */,
+				630E3FDC222E44B29A9401803937BC69 /* SubstitutionExtensions.swift */,
+				08E7D40E364CD3B941166844F9E99682 /* TokenCharacterBuffer.swift */,
+				1074D9435F6DE5F8BEDFEA6BB9643328 /* TokenExtractor.swift */,
+				CD9635F7EAF782E49E3F12AB53E36B22 /* TokenGrouper.swift */,
+				027B7EADA7A580717E38A65F76CFC55A /* Tokenizer.swift */,
+				41516D5A5CA38227490E5DCFF5EB2044 /* TokenResolver.swift */,
+				68369C13C4BCF766306FAC6EB296B97D /* VariableExtractor.swift */,
+				10BEDFF51D77149C196583BC2AED4B92 /* Support Files */,
+			);
+			name = DDMathParser;
+			path = DDMathParser;
+			sourceTree = "<group>";
+		};
+		10BEDFF51D77149C196583BC2AED4B92 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B56A9CCD10D938B850927B95BAFA4A3E /* DDMathParser.modulemap */,
+				88EB58622F5873F4A8805E794E80A318 /* DDMathParser.xcconfig */,
+				65AD13881C725F9702870580D2BC3060 /* DDMathParser-dummy.m */,
+				B7B7A763B9D24C5A5083D2F7D0C6F5E2 /* DDMathParser-prefix.pch */,
+				FAA65383C0CB2164200CA8C0A3B0A4F0 /* DDMathParser-umbrella.h */,
+				CEEB6BEE27BC7540495AAFE6AD294F26 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DDMathParser";
+			sourceTree = "<group>";
+		};
+		310885D974A76C0F3F4B7CB4A4CC5168 /* Pods-myRiemann */ = {
+			isa = PBXGroup;
+			children = (
+				AD7CCB8E34FD191FE07D606795FEE0FC /* Info.plist */,
+				CBE976CB54DED6A1903BA4E4E26D03A7 /* Pods-myRiemann.modulemap */,
+				8FB36B107CC6C036318C3A0E2B33095B /* Pods-myRiemann-acknowledgements.markdown */,
+				9EADBA247EA414CF1D9E180FA7989FA9 /* Pods-myRiemann-acknowledgements.plist */,
+				807F2FE20863C2B986663FAFB9745959 /* Pods-myRiemann-dummy.m */,
+				461E061B846E2C8E2B038F1A540DB695 /* Pods-myRiemann-frameworks.sh */,
+				6B17B9AA4CCBF80C598C17165B80CA54 /* Pods-myRiemann-resources.sh */,
+				0F7D33408E54F5BAFA4DB6B0DE50603A /* Pods-myRiemann-umbrella.h */,
+				598AA7F091D488EE16B888D4B0D3C3D4 /* Pods-myRiemann.debug.xcconfig */,
+				0017B25CE9733CB0AB455BCFB6958B36 /* Pods-myRiemann.release.xcconfig */,
+			);
+			name = "Pods-myRiemann";
+			path = "Target Support Files/Pods-myRiemann";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A71C775D9422E11950AA51BC2A34498F /* Pods */,
+				B44207D19F8FBD5FD510C06AD6BCD6E9 /* Products */,
+				E5F349D791B85B6BDD0E302ED822074E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A71C775D9422E11950AA51BC2A34498F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0457AEE7115D6D228D62876354BEDB2A /* DDMathParser */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B44207D19F8FBD5FD510C06AD6BCD6E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE6D9956138AA9EF03E3659A76D8D6FA /* MathParser.framework */,
+				A492FF41FB47D2A7CC40376D6F866CF7 /* Pods_myRiemann.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E5F349D791B85B6BDD0E302ED822074E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				310885D974A76C0F3F4B7CB4A4CC5168 /* Pods-myRiemann */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8F3A880F0B421B64D8202032D26EB86C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10AB9E1BD4DDD9EB73F150E915542DD /* DDMathParser-umbrella.h in Headers */,
+				D0A4A44BF06B5240D2BCEEAE1222B310 /* MathParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B523FD5CC6E5C8A02527006A06785A41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8770D222605F37E53FC3AD63EE13830 /* Pods-myRiemann-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		66CE9D9C5726C6591792993EAA7D48BE /* Pods-myRiemann */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B035309AA0A532B8A66AC9CCF5AFA620 /* Build configuration list for PBXNativeTarget "Pods-myRiemann" */;
+			buildPhases = (
+				D4670F083845A87728E4449A02C2AEBF /* Sources */,
+				D1C31E29012821D904AF30CD1CA4C37F /* Frameworks */,
+				B523FD5CC6E5C8A02527006A06785A41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57BA564E15D135C6CC733B001F4E1B9F /* PBXTargetDependency */,
+			);
+			name = "Pods-myRiemann";
+			productName = "Pods-myRiemann";
+			productReference = A492FF41FB47D2A7CC40376D6F866CF7 /* Pods_myRiemann.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B027C7F17A48E878172D5B42600DA24F /* DDMathParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE22D45446B6FB77AD90D04AE760D9A /* Build configuration list for PBXNativeTarget "DDMathParser" */;
+			buildPhases = (
+				2ACDF794F1CD9B83CC48A8CFB093A4BD /* Sources */,
+				EFC757DE76EB033662F943D64E8B1E71 /* Frameworks */,
+				8F3A880F0B421B64D8202032D26EB86C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDMathParser;
+			productName = DDMathParser;
+			productReference = DE6D9956138AA9EF03E3659A76D8D6FA /* MathParser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B44207D19F8FBD5FD510C06AD6BCD6E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B027C7F17A48E878172D5B42600DA24F /* DDMathParser */,
+				66CE9D9C5726C6591792993EAA7D48BE /* Pods-myRiemann */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ACDF794F1CD9B83CC48A8CFB093A4BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2BDD21C4542A38985B582305C84419 /* Character.swift in Sources */,
+				5C64EF269D4A65E548A7E2079385D0E3 /* DDMathParser-dummy.m in Sources */,
+				0F9B784BBCE903B5CF156450F9C345CA /* DecimalNumberExtractor.swift in Sources */,
+				E748E0730687BC4727B6D77AA3C29CDD /* Double.swift in Sources */,
+				228E5A568C323812A2A6A4F9D2185DF0 /* DynamicResolution.swift in Sources */,
+				756C4497F3C63FC7C1E494495581F941 /* Either.swift in Sources */,
+				ED9929024BCE469E3D415C17DB263A59 /* Evaluator.swift in Sources */,
+				7093D99503523D752EA9902BD7F20816 /* ExponentExtractor.swift in Sources */,
+				1151BE54F9D22DE480BE30D99EFBBC84 /* Expression.swift in Sources */,
+				C34C8F6791CA97975B2FFA1F7D9939AE /* Expressionizer.swift in Sources */,
+				37D2F9997D49312E1E7E4E2FFB066297 /* ExpressionRewriter.swift in Sources */,
+				D6B4A3A9258B170A99E6AD870E199B35 /* FractionNumberExtractor.swift in Sources */,
+				AC080B9E48F4FA494CABCF13CE37E852 /* Function.swift in Sources */,
+				EB33AE18FC4B0A7FC2B610F20613400F /* Functions+Defaults.swift in Sources */,
+				49EE2E610ED7756ABF3023CA655C3B83 /* FunctionSet.swift in Sources */,
+				B6F7BAD5A9CD9AA2A87FD31FFA3D8ACB /* GroupedToken.swift in Sources */,
+				67DA2AB8E6F761A4AE575733CB1E3663 /* HexNumberExtractor.swift in Sources */,
+				03EA62D198E8474E796F33C2EA700147 /* IdentifierExtractor.swift in Sources */,
+				74F24A506C947B807379EBC2A32A179B /* LocalizedNumberExtractor.swift in Sources */,
+				13968FCE4C4CE31129429F078F321434 /* MathParserErrors.swift in Sources */,
+				2DDEA3F01353C385240969E73470C374 /* OctalNumberExtractor.swift in Sources */,
+				57A4D8A2108562839210A0BA304DCCEF /* Operator+Defaults.swift in Sources */,
+				012D8C5A97FACF82D4FAFE377D616D6E /* Operator.swift in Sources */,
+				88F41F9A2BF22FF0D8B96BF6CFD90067 /* OperatorExtractor.swift in Sources */,
+				EA21D175046AC903DFB33645BE8206FA /* OperatorSet.swift in Sources */,
+				8D185DC698F56D86B7328F39756DC2A9 /* OperatorTokenSet.swift in Sources */,
+				9865486C92CC5C3815D245BF0D3CD31D /* PeekingIterator.swift in Sources */,
+				69ACE2C26F8B2A5AB2888283F8986E63 /* QuotedVariableExtractor.swift in Sources */,
+				9C0987258BAD2DE0272AD586CC8C5A0D /* RawToken.swift in Sources */,
+				9967CE6C3B9E485747AFD3843E29481C /* ResolvedToken.swift in Sources */,
+				D8C8F0D2D50311DB97CD880CA464167A /* RewriteRule+Defaults.swift in Sources */,
+				ECEFA0C5D78CD38D4AA04B3E1B135AA4 /* RewriteRule.swift in Sources */,
+				7289AF8004695BEFDCB21B4ED5E1B98F /* String.swift in Sources */,
+				348026454DCFED4115E654B2E6D0ECDD /* SubstitutionExtensions.swift in Sources */,
+				3041C743DF3918E59A153E47486F585C /* TokenCharacterBuffer.swift in Sources */,
+				DC265E37626AE66AE2E82F9BA5802B1F /* TokenExtractor.swift in Sources */,
+				A834DC864B4312267B09DE81096BADFF /* TokenGrouper.swift in Sources */,
+				26CB1FB6E8C96622EAEF105830E298D8 /* Tokenizer.swift in Sources */,
+				02BB0A406F920A177DAF413B8B7694F7 /* TokenResolver.swift in Sources */,
+				894CFF8635ED72EA92E3B4703F16640D /* VariableExtractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4670F083845A87728E4449A02C2AEBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B6AADEF3DB6307D268BE09DA7021FB /* Pods-myRiemann-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57BA564E15D135C6CC733B001F4E1B9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DDMathParser;
+			target = B027C7F17A48E878172D5B42600DA24F /* DDMathParser */;
+			targetProxy = 1684C46E0BB49A620CC3B95C24A607BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E650E8538DB50654A31B83816A08972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0017B25CE9733CB0AB455BCFB6958B36 /* Pods-myRiemann.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-myRiemann/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-myRiemann/Pods-myRiemann.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_myRiemann;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		26F954BA177A9A46FFFD4E23ED11D67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7EB8305E26FD89B7B5EAADD565F271FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598AA7F091D488EE16B888D4B0D3C3D4 /* Pods-myRiemann.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-myRiemann/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-myRiemann/Pods-myRiemann.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_myRiemann;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		863227CF204BF2448A21FC5FB66E35BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88EB58622F5873F4A8805E794E80A318 /* DDMathParser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DDMathParser/DDMathParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDMathParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDMathParser/DDMathParser.modulemap";
+				PRODUCT_NAME = MathParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF233B69D7F4A46C91C794FFBBB1C296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88EB58622F5873F4A8805E794E80A318 /* DDMathParser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DDMathParser/DDMathParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDMathParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDMathParser/DDMathParser.modulemap";
+				PRODUCT_NAME = MathParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */,
+				26F954BA177A9A46FFFD4E23ED11D67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EE22D45446B6FB77AD90D04AE760D9A /* Build configuration list for PBXNativeTarget "DDMathParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF233B69D7F4A46C91C794FFBBB1C296 /* Debug */,
+				863227CF204BF2448A21FC5FB66E35BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B035309AA0A532B8A66AC9CCF5AFA620 /* Build configuration list for PBXNativeTarget "Pods-myRiemann" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB8305E26FD89B7B5EAADD565F271FB /* Debug */,
+				1E650E8538DB50654A31B83816A08972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
