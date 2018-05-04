@@ -6,5 +6,5 @@ target 'myRiemann' do
 
   # Pods for myRiemann
     pod 'DDMathParser', :git => 'https://github.com/davedelong/DDMathParser.git', :tag => 'swift4'
-
+    pod 'Charts'
 end

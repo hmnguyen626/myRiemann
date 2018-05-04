@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0AA85532099606E00FECC68 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA85522099606E00FECC68 /* GraphViewController.swift */; };
 		A0DE5BCD2072B50400D045C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE5BCC2072B50400D045C3 /* AppDelegate.swift */; };
 		A0DE5BCF2072B50400D045C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE5BCE2072B50400D045C3 /* ViewController.swift */; };
 		A0DE5BD22072B50400D045C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DE5BD02072B50400D045C3 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		23A7575C4FAEBB93EF5D38A4 /* Pods_myRiemann.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myRiemann.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF2B579F4180E72AC0C826C /* Pods-myRiemann.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRiemann.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myRiemann/Pods-myRiemann.debug.xcconfig"; sourceTree = "<group>"; };
 		53EBED721421F10FB761CEF9 /* Pods-myRiemann.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRiemann.release.xcconfig"; path = "Pods/Target Support Files/Pods-myRiemann/Pods-myRiemann.release.xcconfig"; sourceTree = "<group>"; };
+		A0AA85522099606E00FECC68 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		A0DE5BC92072B50400D045C3 /* myRiemann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myRiemann.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DE5BCC2072B50400D045C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DE5BCE2072B50400D045C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A0DE5BD32072B50400D045C3 /* Assets.xcassets */,
 				A0DE5BD52072B50400D045C3 /* LaunchScreen.storyboard */,
 				A0DE5BD82072B50400D045C3 /* Info.plist */,
+				A0AA85522099606E00FECC68 /* GraphViewController.swift */,
 			);
 			path = myRiemann;
 			sourceTree = "<group>";
@@ -118,7 +121,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = HMdev;
 				TargetAttributes = {
 					A0DE5BC82072B50400D045C3 = {
@@ -181,10 +184,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-myRiemann/Pods-myRiemann-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DDMathParser/MathParser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MathParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0AA85532099606E00FECC68 /* GraphViewController.swift in Sources */,
 				A0DE5BCF2072B50400D045C3 /* ViewController.swift in Sources */,
 				A0DE5BCD2072B50400D045C3 /* AppDelegate.swift in Sources */,
 			);
@@ -258,6 +264,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +272,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -315,6 +323,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -322,6 +331,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

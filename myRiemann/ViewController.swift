@@ -8,16 +8,16 @@
 
 import UIKit
 import MathParser
+import Charts
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    // Standard Global variables
+    // Global variables
     var lowerBoundValue : Int = 0
     var upperBoundValue : Int = 0
     var sliderValue : Int = 0
     var finalizedInputString : String = ""
 
-    
     // Logic Global variables
     var height : Double = 0.0
     var area : Double = 0.0
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         userfunctionInputLabel.isHidden = true
         
         // Assign unicode to deltaX label
-        deltaXLabel.text = "\u{2206}x = 0"
+        deltaXLabel.text = "Rectangles = 0"
         
         // Assigning default value of UISlider
         sliderObject.value = 1
@@ -94,9 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             makeError(whatTitle: "Division by zero", whatMessage: "Slider is set to 0.", whatAction: "Okay")
         }
-        
-        print("DeltaX Width: \(tempDeltaX)")
-        print("Number of rectangles: \(numberOfRectangles)")
 
         return tempDeltaX
     }
@@ -205,14 +202,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         for i in 0...whatRange - 1 {
             do {
-                
+                // MathParser evaluates with a variable 'x' in the user input
                 let value = try finalizedInputString.evaluate(["x": position])
-                //print("position\(i): \(position)")
-                //print("value\(i): \(value)")
                 area += value * deltaX
-                //print("Area: \(area)")
-                
                 position += deltaX
+                
             } catch {
                 print(error)
                 makeError(whatTitle: "Invalid expression", whatMessage: "Please check input.", whatAction: "Okay")
@@ -228,13 +222,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         for i in 0...whatRange - 1 {
             do {
-                
+                // MathParser evaluates with a variable 'x' in the user input
                 let value = try finalizedInputString.evaluate(["x": position])
-                //print("position\(i): \(position)")
-                //print("value\(i): \(value)")
                 area += value * deltaX
-                //print("Area: \(area)")
-                
                 position -= deltaX
             } catch {
                 print(error)
@@ -246,25 +236,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MidRiemannSum calculation
     func calculateMidRiemannSum(whatRange: Int) -> Double {
-//        let area1 = calculateLeftRiemannSum(whatRange: whatRange)
-//        let area2 = calculateRightRiemannSum(whatRange: whatRange)
-//
-//        return ((area1 + area2)/2)
-        
         var area : Double = 0.0
         var position : Double = deltaX / 2.0
         
         for i in 0...whatRange - 1 {
             do {
-                
+                // MathParser evaluates with a variable 'x' in the user input
                 let value = try finalizedInputString.evaluate(["x": position])
-                print("\n--------\n")
-                print("position\(i): \(position)")
-                print("value\(i): \(value)")
                 area += value * (deltaX)
-                print("Area: \(area)")
-                print("\n--------\n")
-                
                 position += deltaX
             } catch {
                 print(error)
@@ -323,7 +302,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // If Graph is pressed, then perform segue to graph
     @IBAction func graphButtonPressed(_ sender: Any) {
-        makeError(whatTitle: "Work in progress", whatMessage: "I was too tired...", whatAction: "Okay")
+        //makeError(whatTitle: "Work in progress", whatMessage: "I was too tired...", whatAction: "Okay")
+        
+        performSegue(withIdentifier: "GraphViewController", sender: self)
+    }
+    
+    // Prepares segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If our segue identifier is "sendDataForward" then go to second VC
+        if segue.identifier == "GraphViewController" {
+            
+            // Set the destination of our segue
+            let secondVC = segue.destination as! GraphViewController
+
+        }
     }
     
     // Changing the button background color depending on selection
@@ -366,7 +358,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // Which method depending on user selection
+    // Logic for which Reimann method selected
     @IBAction func methodSelected(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -388,14 +380,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // UISLIDER and label update
     @IBAction func sliderPressed(_ sender: UISlider) {
-        // Weird error check
+        //
         if maxDeltaX.text != "" {
+            
+            // Force unwrap since maxDeltaX can not be empty
             maxDeltaInputCheck = maxDeltaX.text!
+            
+            // Sets our UISlider object max value to user selected Max.
+            // Assign global sliderValue to UISlider current value and update label.
             sliderObject.maximumValue = Float(maxDeltaInputCheck)!
-            
             sliderValue = Int(sender.value)
-            
-            deltaXLabel.text = "\u{2206}x = \(sliderValue)"
+            deltaXLabel.text = "Rectangles = \(sliderValue)"
         }
     }
     
@@ -403,10 +398,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Dismisses if clicked outside of object
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        
     }
     
-    // Handling dismissal of keyboard depending on UITEXTFIELD
+    // Error: Without this the viewcontroller does not know who is the first responder,
+    // therefore we have to implement the fix below.
+    // Fix -
+    // Handling dismissal of keyboard depending on UITEXTFIELD.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         // Becomes or resignFirstResponder according to textField
@@ -426,7 +423,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // Overrides our textField to only:
     // Allows only numbers, x, +, -, /, *, (, ), and -
+    // Future update should include:
+    // sin(), cos(), tan(), arctan(), etc...
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let aSet = NSCharacterSet(charactersIn:"-0123456789x*+/e()$").inverted
         let compSepByCharInSet = string.components(separatedBy: aSet)

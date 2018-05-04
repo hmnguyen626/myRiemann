@@ -1,7 +1,11 @@
 PODS:
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - DDMathParser (2.0.0)
 
 DEPENDENCIES:
+  - Charts
   - DDMathParser (from `https://github.com/davedelong/DDMathParser.git`, tag `swift4`)
 
 EXTERNAL SOURCES:
@@ -15,8 +19,9 @@ CHECKOUT OPTIONS:
     :tag: swift4
 
 SPEC CHECKSUMS:
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
 
-PODFILE CHECKSUM: d93ae02249d6bd4f976583f181eb5dbc9e63470a
+PODFILE CHECKSUM: 5007e29744c57356e71e7c4dc2f17860fe416051
 
 COCOAPODS: 1.4.0
